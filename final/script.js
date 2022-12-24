@@ -148,9 +148,9 @@ const checkWinner = function (avgDolphins, avgKoalas) {
     console.log('No team wins...');
   }
 }
-checkWinner(scoreDolphins, scoreKoalas);
+// checkWinner(scoreDolphins, scoreKoalas);
 
-checkWinner(576, 111);
+// checkWinner(576, 111);
 
 // Test 2
 scoreDolphins = calcAverage(85, 54, 41);
