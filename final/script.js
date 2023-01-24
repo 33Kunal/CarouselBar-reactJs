@@ -224,15 +224,15 @@ console.log(friends);
 console.log(friends.indexOf('Steven'));
 console.log(friends.indexOf('Bob'));
 
-friends.push(23);
-console.log(friends.includes('Steven'));
-console.log(friends.includes('Bob'));
-console.log(friends.includes(23));
+// friends.push(23);
+// console.log(friends.includes('Steven'));
+// console.log(friends.includes('Bob'));
+// console.log(friends.includes(23));
 
-if (friends.includes('Steven')) {
-  console.log('You have a friend called Steven');
-}
-*/
+// if (friends.includes('Steven')) {
+//   console.log('You have a friend called Steven');
+// }
+// */
 
 ///////////////////////////////////////
 // Coding Challenge #2
