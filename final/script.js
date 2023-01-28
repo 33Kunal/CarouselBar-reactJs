@@ -586,3 +586,12 @@ const CalcAverage = s1, s2, s3 => (s1 + s2 + s3) / 3;
 
 const avgkoalas = CalcAverage(65, 54, 49);
 console.log(avgkoalas);
+const onProfileClick = (event) => {
+  event.stopPropagation();
+  const profileMenu = document.querySelector("#profile-menu");
+  profileMenu.classList.toggle("hidden");
+  // it removes auth tokens from the localStorage (./common.js - line 14)
+  if (!profileMenu.classList.contains("hidden")) {
+    profileMenu.querySelector("li#logout").addEventListener("click", logout);
+  }
+};
