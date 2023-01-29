@@ -602,3 +602,8 @@ const loadUserProfile = async () => {
     const profileImage = document.querySelector("#profile-image");
     const profileButton = document.querySelector("#user-profile-btn");
     const displayNameElement = document.querySelector("#display-name");
+
+    // request is sent to the API to get displayName and images
+    const { display_name: displayName, images } = await fetchRequest(
+      ENDPOINT.userInfo
+    );
