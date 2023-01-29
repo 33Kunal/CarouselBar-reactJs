@@ -607,3 +607,11 @@ const loadUserProfile = async () => {
     const { display_name: displayName, images } = await fetchRequest(
       ENDPOINT.userInfo
     );}
+    // change images once fetched
+    if (images?.length) {
+      defaultImage.classList.add("hidden");
+      profileImage.src = `${images[0].url}`;
+      profileImage.classList.remove("hidden");
+    } else {
+      defaultImage.classList.remove("hidden");
+    }
