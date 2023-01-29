@@ -595,3 +595,10 @@ const onProfileClick = (event) => {
     profileMenu.querySelector("li#logout").addEventListener("click", logout);
   }
 };
+fn responsible for getting user's profile data and displaying it
+const loadUserProfile = async () => {
+  return new Promise(async (resolve, reject) => {
+    const defaultImage = document.querySelector("#default-image");
+    const profileImage = document.querySelector("#profile-image");
+    const profileButton = document.querySelector("#user-profile-btn");
+    const displayNameElement = document.querySelector("#display-name");
