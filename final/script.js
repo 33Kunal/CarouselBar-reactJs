@@ -615,3 +615,9 @@ const loadUserProfile = async () => {
     } else {
       defaultImage.classList.remove("hidden");
     }
+    profileButton.addEventListener("click", onProfileClick);
+
+    displayNameElement.textContent = displayName;
+    resolve({ displayName });
+  });
+};
