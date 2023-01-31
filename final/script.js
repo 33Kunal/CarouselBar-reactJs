@@ -604,20 +604,20 @@ const loadUserProfile = async () => {
     const displayNameElement = document.querySelector("#display-name");
 
     // request is sent to the API to get displayName and images
-    const { display_name: displayName, images } = await fetchRequest(
-      ENDPOINT.userInfo
-    );}
-    // change images once fetched
-    if (images?.length) {
-      defaultImage.classList.add("hidden");
-      profileImage.src = `${images[0].url}`;
-      profileImage.classList.remove("hidden");
-    } else {
-      defaultImage.classList.remove("hidden");
-    }
-    profileButton.addEventListener("click", onProfileClick);
+//     const { display_name: displayName, images } = await fetchRequest(
+//       ENDPOINT.userInfo
+//     );}
+//     // change images once fetched
+//     if (images?.length) {
+//       defaultImage.classList.add("hidden");
+//       profileImage.src = `${images[0].url}`;
+//       profileImage.classList.remove("hidden");
+//     } else {
+//       defaultImage.classList.remove("hidden");
+//     }
+//     profileButton.addEventListener("click", onProfileClick);
 
-    displayNameElement.textContent = displayName;
-    resolve({ displayName });
-  });
-};
+//     displayNameElement.textContent = displayName;
+//     resolve({ displayName });
+//   });
+// };
