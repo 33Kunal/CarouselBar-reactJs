@@ -603,6 +603,13 @@ const loadUserProfile = async () => {
     const profileButton = document.querySelector("#user-profile-btn");
     const displayNameElement = document.querySelector("#display-name");
 
+
+    // fn responsible for changing section type leading to changing url to clicked playlist id (PLAYLIST)
+const onPlaylistItemClicked = (event, id) => {
+  const section = { type: SECTIONTYPE.PLAYLIST, playlist: id };
+  history.pushState(section, "", `playlist/${id}`);
+  loadSection(section);
+};
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
 //       ENDPOINT.userInfo
