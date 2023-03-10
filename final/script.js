@@ -610,6 +610,12 @@ const onPlaylistItemClicked = (event, id) => {
   history.pushState(section, "", `playlist/${id}`);
   loadSection(section);
 };
+// fn responsible for fetching playlists data and displaying them on the dashboard
+const loadPlaylist = async (endpoint, elementId) => {
+  const {
+    playlists: { items },
+  } = await fetchRequest(endpoint);
+
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
 //       ENDPOINT.userInfo
