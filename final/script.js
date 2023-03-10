@@ -615,6 +615,8 @@ const loadPlaylist = async (endpoint, elementId) => {
   const {
     playlists: { items },
   } = await fetchRequest(endpoint);
+  const playlistItemsSection = document.querySelector(`#${elementId}`);
+  for (let { name, description, images, id } of items) 
 
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
