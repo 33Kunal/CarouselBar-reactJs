@@ -617,6 +617,14 @@ const loadPlaylist = async (endpoint, elementId) => {
   } = await fetchRequest(endpoint);
   const playlistItemsSection = document.querySelector(`#${elementId}`);
   for (let { name, description, images, id } of items) 
+  let playlistItem = document.createElement("section");
+  playlistItem.className =
+    "bg-black-secondary rounded p-4 hover:cursor-pointer hover:bg-light-black";
+  playlistItem.id = id;
+  playlistItem.setAttribute("data-type", "playlist");
+  playlistItem.addEventListener("click", (event) =>
+    onPlaylistItemClicked(event, id)
+  );
 
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
