@@ -625,6 +625,18 @@ const loadPlaylist = async (endpoint, elementId) => {
   playlistItem.addEventListener("click", (event) =>
     onPlaylistItemClicked(event, id)
   );
+  const [image] = images;
+    playlistItem.innerHTML += `<img src="${image.url}" alt="${name}" class="rounded mb-2 object-contain shadow" />
+              <h2 class="text-base font-semibold mb-4 truncate">${name}</h2>
+              <h3 class="text-sm text-secondary line-clamp-2">${description}</h3>`;
+    playlistItemsSection.appendChild(playlistItem);
+  }
+};
+// fn responsible for passing the required values for getting all the playlists
+const loadPlaylists = () => {
+  loadPlaylist(ENDPOINT.featuredPlaylist, "featured-playlist-items");
+  loadPlaylist(ENDPOINT.toplists, "toplists-playlist-items");
+};
 
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
