@@ -646,7 +646,8 @@ const fillContentForDashboard = () => {
     ["featured", "featured-playlist-items"],
     ["top playlists", "toplists-playlist-items"],
   ]);
-
+  let innerHTML = "";
+  // looping through the playlist's type that needs to be displayed
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
 //       ENDPOINT.userInfo
