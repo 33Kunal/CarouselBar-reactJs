@@ -647,6 +647,16 @@ const fillContentForDashboard = () => {
     ["top playlists", "toplists-playlist-items"],
   ]);
   let innerHTML = "";
+  for (let [type, id] of playlistMap) {
+    innerHTML += `
+        <article class="p-4">
+          <h1 class="mb-4 text-2xl font-bold capitalize">${type}</h1>
+          <section
+            id="${id}"
+            class="grid grid-cols-auto-fill-cards gap-4"
+          ></section>
+        </article>`;
+  }
   // looping through the playlist's type that needs to be displayed
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
