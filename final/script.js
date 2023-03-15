@@ -637,6 +637,15 @@ const loadPlaylists = () => {
   loadPlaylist(ENDPOINT.featuredPlaylist, "featured-playlist-items");
   loadPlaylist(ENDPOINT.toplists, "toplists-playlist-items");
 };
+/ fn responsible for filling display name and playlist's name for main cover
+const fillContentForDashboard = () => {
+  const coverContent = document.querySelector("#cover-content");
+  coverContent.innerHTML = `<h1 class="text-6xl">Hello, ${displayName}</h1>`;
+  const pageContent = document.querySelector("#page-content");
+  const playlistMap = new Map([
+    ["featured", "featured-playlist-items"],
+    ["top playlists", "toplists-playlist-items"],
+  ]);
 
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
