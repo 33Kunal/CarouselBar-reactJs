@@ -657,6 +657,16 @@ const fillContentForDashboard = () => {
           ></section>
         </article>`;
   }
+  pageContent.innerHTML = innerHTML;
+};
+
+const formatTime = (duration) => {
+  const min = Math.floor(duration / 60_000);
+  const sec = ((duration % 60_000) / 1000).toFixed(0);
+  const formattedTime =
+    sec == 60 ? min + 1 + ":00" : min + ":" + (sec < 10 ? "0" : "") + sec;
+  return formattedTime;
+};
   // looping through the playlist's type that needs to be displayed
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
