@@ -667,6 +667,18 @@ const formatTime = (duration) => {
     sec == 60 ? min + 1 + ":00" : min + ":" + (sec < 10 ? "0" : "") + sec;
   return formattedTime;
 };
+const onTrackSelection = (id, event) => {
+  document.querySelectorAll("#tracks .track").forEach((trackItem) => {
+    if (trackItem.id === id) {
+      trackItem.classList.add("bg-gray", "selected");
+    } else {
+      trackItem.classList.remove("bg-gray", "selected");
+    }
+  });
+};
+/ fn responsible for fetching playlist data and displaying its content.
+const fillContentForPlaylist = async (playlistId) => {
+  const playlist = await fetchRequest(`${ENDPOINT.playlist}/${playlistId}`);
   // looping through the playlist's type that needs to be displayed
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
