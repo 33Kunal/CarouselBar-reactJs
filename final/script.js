@@ -679,6 +679,19 @@ const onTrackSelection = (id, event) => {
 / fn responsible for fetching playlist data and displaying its content.
 const fillContentForPlaylist = async (playlistId) => {
   const playlist = await fetchRequest(`${ENDPOINT.playlist}/${playlistId}`);
+  const { name, images, description, tracks, followers } = playlist;
+  const coverElement = document.querySelector("#cover-content");
+  coverElement.innerHTML = `
+          <section class="flex flex-row justify-start items-end p-4">
+            <img class="object-contain h-48 w-48" src=${images[0].url} alt="" />
+            <section class="px-4">
+              <p class="">PLAYLIST</p>
+              <h2 id="playlist-name" class="text-5xl font-extrabold pb-4">${name}</h2>
+              <p class="text-secondary" id="playlist-details">${description}</p>
+              <p id="playlist-details">${tracks.items.length} songs</p>
+            </section>
+          </section>`;
+  const pageContent = document.querySelector("#page-content");
   // looping through the playlist's type that needs to be displayed
     // request is sent to the API to get displayName and images
 //     const { display_name: displayName, images } = await fetchRequest(
