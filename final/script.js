@@ -692,11 +692,7 @@ const fillContentForPlaylist = async (playlistId) => {
             </section>
           </section>`;
   const pageContent = document.querySelector("#page-content");
-  // looping through the playlist's type that needs to be displayed
-    // request is sent to the API to get displayName and images
-//     const { display_name: displayName, images } = await fetchRequest(
-//       ENDPOINT.userInfo
-//     );}
+ 
 //     // change images once fetched
 //     if (images?.length) {
 //       defaultImage.classList.add("hidden");
