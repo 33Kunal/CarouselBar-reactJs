@@ -707,19 +707,19 @@ const fillContentForPlaylist = async (playlistId) => {
 //     resolve({ displayName });
 //   });
 // };
-pageContent.innerHTML = `
-          <header id="playlist-header" class="mx-8 py-4 border-secondary border-b-[0.5px]">
-            <nav class="py-2">
-              <ul
-                class="grid grid-cols-[50px_1fr_1fr_50px] gap-4 text-secondary"
-              >
-                <li class="justify-self-center">#</li>
-                <li>Title</li>
-                <li>Album</li>
-                <li>🕥</li>
-              </ul>
-            </nav>
-          </header>
-          <section id="tracks" class="px-8 text-secondary mt-4">
-          </section>
-  `;
+// pageContent.innerHTML = `
+//           <header id="playlist-header" class="mx-8 py-4 border-secondary border-b-[0.5px]">
+//             <nav class="py-2">
+//               <ul
+//                 class="grid grid-cols-[50px_1fr_1fr_50px] gap-4 text-secondary"
+//               >
+//                 <li class="justify-self-center">#</li>
+//                 <li>Title</li>
+//                 <li>Album</li>
+//                 <li>🕥</li>
+//               </ul>
+//             </nav>
+//           </header>
+//           <section id="tracks" class="px-8 text-secondary mt-4">
+//           </section>
+//   `;
