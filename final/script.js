@@ -723,3 +723,22 @@ const fillContentForPlaylist = async (playlistId) => {
 //           <section id="tracks" class="px-8 text-secondary mt-4">
 //           </section>
 //   `;
+const onTrackSelection = (id, event) => {
+  document.querySelectorAll("#tracks .track").forEach((trackItem) => {
+    if (trackItem.id === id) {
+      trackItem.classList.add("bg-gray", "selected");
+    } else {
+      trackItem.classList.remove("bg-gray", "selected");
+    }
+  });
+};
+/ fn responsible for play/pause toggle
+const togglePlay = () => {
+  if (audio.src) {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  }
+};
