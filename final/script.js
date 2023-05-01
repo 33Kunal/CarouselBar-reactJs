@@ -732,13 +732,13 @@ const onTrackSelection = (id, event) => {
     }
   });
 };
-/ fn responsible for play/pause toggle
-const togglePlay = () => {
-  if (audio.src) {
-    if (audio.paused) {
-      audio.play();
-    } else {
-      audio.pause();
-    }
-  }
-};
+// / fn responsible for play/pause toggle
+// const togglePlay = () => {
+//   if (audio.src) {
+//     if (audio.paused) {
+//       audio.play();
+//     } else {
+//       audio.pause();
+//     }
+//   }
+// };
