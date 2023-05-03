@@ -755,3 +755,9 @@ const findCurrentTrack = () => {
   }
   return null;
 };
+const playPrevTrack = () => {
+  const { currentTrackIndex = -1, tracks = null } = findCurrentTrack() ?? {}; // default is set to 1st track
+  if (currentTrackIndex > 0) {
+    const prevTrack = tracks[currentTrackIndex - 1];
+    playTrack(null, prevTrack);
+  }
