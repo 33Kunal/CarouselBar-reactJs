@@ -742,3 +742,16 @@ const onTrackSelection = (id, event) => {
 //     }
 //   }
 // };
+/ fns for finding current track and playing next or previous track
+const findCurrentTrack = () => {
+  const audioControl = document.querySelector("#audio-control");
+  const trackId = audioControl.getAttribute("data-track-id");
+  if (trackId) {
+    const loadedTracks = getItemFromLocalStorage(LOADED_TRACKS);
+    const currentTrackIndex = loadedTracks?.findIndex(
+      (track) => track.id === trackId
+    );
+    return { currentTrackIndex, tracks: loadedTracks };
+  }
+  return null;
+};
