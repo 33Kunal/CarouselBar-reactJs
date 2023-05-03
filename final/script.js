@@ -761,3 +761,11 @@ const playPrevTrack = () => {
     const prevTrack = tracks[currentTrackIndex - 1];
     playTrack(null, prevTrack);
   }
+  const playNextTrack = () => {
+    const { currentTrackIndex = -1, tracks = null } = findCurrentTrack() ?? {}; // default is set to 1st track
+    if (currentTrackIndex > -1 && currentTrackIndex < tracks?.length - 1) {
+      const currentTrack = tracks[currentTrackIndex + 1];
+      playTrack(null, currentTrack);
+    }
+  };
+  
