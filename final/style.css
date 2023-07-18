@@ -9,6 +9,10 @@ App-link {
       animation: App-logo-spin infinite 20s linear;
     }
   }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 
   .App-header {
     background-color: #282c34;
