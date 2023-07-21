@@ -17,6 +17,10 @@ App-link {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas,
+        
+     } 
   .App-header {
     background-color: #282c34;
     min-height: 100vh;
