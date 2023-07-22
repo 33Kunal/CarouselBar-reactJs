@@ -19,7 +19,7 @@ App-link {
     }
     code {
         font-family: source-code-pro, Menlo, Monaco, Consolas,
-        
+        monospace;
      } 
   .App-header {
     background-color: #282c34;
